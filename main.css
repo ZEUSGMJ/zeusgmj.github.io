@@ -27,8 +27,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: #344a53;
 	line-height: 1.6;
-	/* background-image: url('images/svgs/background.dvg.svg'); */
-    background: linear-gradient(145deg, #2D96E1 0%, #00C6CF 45%);
+    background: repeating-linear-gradient(145deg, #2D96E1 0%, #00C6CF 100%);
 }
 
 ul {
@@ -123,6 +122,7 @@ img {
 	text-shadow: 1.5px 0px 0px rgba(0, 137, 84, 0.25);
 	font-weight: 500;
 	font-size: 2.5rem;
+    margin: 0 10px;
 }
 
 .navbar ul {
@@ -176,8 +176,7 @@ h6 {
 	gap: 15px 30px;
 	grid-template-areas:
 		'showcase-about showcase-about'
-		'showcase-education showcase-skills'
-		'. showcase-contact';
+		'showcase-education showcase-skills';
 }
 
 .showcase-about,
@@ -228,76 +227,38 @@ h6 {
 	transition: background-color 800ms ease-out;
 }
 
-.btn-container .btn:hover {
-	background-color: var(--accentlight);
+.btn:hover {
+	background-color: var(--accent);
 }
 
 .showcase-skills {
 	grid-area: showcase-skills;
 }
 
-.showcase-contact {
-	grid-area: showcase-contact;
-}
-
 .contact-list a {
 	color: var(--primaryFont-color);
-}
-
-.showcase-contact h1 {
-	margin: 5px 0px;
-}
-
-.contact-list ul {
-	justify-content: space-around;
-	font-size: 1.05em;
-	flex-basis: auto;
-	position: relative;
-}
-
-.contact-list li {
-	margin: 0 15px;
-}
-
-.contact-list a {
-	position: relative;
-	display: block;
-	width: 3.75rem;
-	height: 3.75rem;
-	text-align: center;
-	line-height: 55px;
-	border-radius: 25%;
-	font-size: 2rem;
-	border: 2px rgba(0, 197, 167) solid;
-	transition: border-radius 500ms ease-out, background-color 500ms ease-out;
-}
-
-.contact-list a:hover {
-	background-color: var(--accentlight);
-	border-radius: 1.75rem;
 }
 
 /* Education */
 .showcase-education {
 	grid-area: showcase-education;
+    position: relative;
 }
 
 .education-container {
 	margin: 5px;
 	padding: 5px;
-	height: 100%;
 }
 
 .education-container ul {
-	top: 50%;
-	left: 50%;
-	padding: 10px;
+	padding: 1px 10px;
+    position: relative;
 }
 
 .education-container ul::before {
 	content: '';
 	width: 1px;
-	height: 40%;
+	height: 100%;
 	position: absolute;
 	border-left: 2px dashed var(--bg-primary);
 }
@@ -406,8 +367,7 @@ h6 {
 	width: 100%;
 	max-width: inherit;
 	height: 100%;
-	background: rgba(0, 197, 167, 0.2);
-	border: var(--accent) solid;
+	background: rgba(0, 197, 167, 0.5);
 	overflow: hidden;
 	border-radius: 25px;
 }
@@ -415,7 +375,7 @@ h6 {
 .skillBarValue {
 	height: 0.4rem;
 	float: left;
-	background: linear-gradient(90deg, #00c5a7, #35a7ff);
+	background: #35a7ff;
 	transition: background-size;
 	border-radius: 25px;
 }
@@ -430,37 +390,37 @@ h6 {
 	padding: 5px;
 }
 
-@media screen and (max-width: 992px) {
-	.container {
-		max-width: 880px;
-		margin: 0 auto;
-		overflow: visible;
-		padding: 0 40px;
-	}
+/* Contact */
+.showcase-contact h1 {
+	margin: 5px 0px;
+}
 
-	.showcase > .grid {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			'showcase-about'
-			'showcase-skills'
-			'showcase-education'
-			'showcase-contact';
-	}
+.contact-list ul {
+	justify-content: space-around;
+	font-size: 1.05em;
+	position: relative;
+}
 
-	.showcase-about .grid {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			'profile-pic'
-			'about-text';
-	}
+.contact-list li {
+	margin: 0 15px;
+}
 
-	.showcase-about .profile-pic {
-		grid-area: profile-pic;
-	}
+.contact-list a {
+	position: relative;
+	display: block;
+	width: 3.75rem;
+	height: 3.75rem;
+	text-align: center;
+	line-height: 55px;
+	border-radius: 25%;
+	font-size: 2rem;
+	border: 2px rgba(0, 197, 167) solid;
+	transition: border-radius 500ms ease-out, background-color 500ms ease-out;
+}
 
-	.showcase-about .about-text {
-		grid-area: about-text;
-	}
+.contact-list a:hover {
+	background-color: var(--accentlight);
+	border-radius: 1.75rem;
 }
 
 .value-00 {
@@ -565,20 +525,12 @@ h6 {
 	gap: 5px;
 	justify-content: center;
 	align-items: center;
-	/* border: 2px dashed crimson; */
 }
 
-/* .glassmorph {
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-	border: 1px solid rgba(255, 255, 255, 0.18);
-	backdrop-filter: blur(5.5px);
-	-webkit-backdrop-filter: blur(5.5px);
-} */
 
 .glassmorph {
 	background: white;
-	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: .75rem;
 	background: linear-gradient(
         145deg,
@@ -591,8 +543,9 @@ h6 {
 	display: inline-block;
 	padding: 10px 15px;
 	cursor: pointer;
-	border: rgba(0, 197, 167, 0.8) 1px solid;
-	border-bottom: rgba(0, 197, 167, 0.8) 2.5px solid;
+    background-color: rgba(255, 255, 255, 0.7);
+	border: var(--primaryFont-color) 1px solid;
+	border-bottom: var(--primaryFont-color) 2.5px solid;
 	color: var(--primaryFont-color);
 	border-radius: 10px;
 	font-weight: 600;
@@ -635,4 +588,97 @@ h6 {
 	100% {
 		background-position: 0% 50%;
 	}
-} ;
+}
+
+/* Tablets and under */
+
+@media screen and (max-width: 768px) {
+
+	.container {
+		max-width: min(95%, 90rem);
+		margin: 0 auto;
+		overflow: visible;
+		padding: 0 10px;
+	}
+
+    .showcase-about,
+    .showcase-skills,
+    .showcase-contact,
+    .showcase-education {
+        width: min(90%, 90rem);    
+    }
+
+	.showcase > .grid {
+		grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+		grid-template-areas:
+			'showcase-about'
+			'showcase-skills'
+			'showcase-education';
+	}
+
+	.showcase-about .grid {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'profile-pic'
+			'about-text';
+	}
+
+	.showcase-about .profile-pic {
+		grid-area: profile-pic;
+	}
+
+	.showcase-about .about-text {
+		grid-area: about-text;
+	}
+
+    .showcase-contact {
+        margin: 0 auto;
+    }
+
+    .contact-list ul{
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        position: relative;
+    }
+    
+    .contact-list ul {
+        flex-basis: 50%;
+        margin: 0 15px;
+    }
+
+    .contact-list ul li {
+        font-size: 1em;
+    }
+}
+
+/* Mobiles */
+
+@media screen and (max-width: 500px) {
+    .showcase-about,
+    .showcase-skills,
+    .showcase-contact,
+    .showcase-education {
+        width: min(95%, 80rem); 
+        margin: 5px auto;   
+    }
+
+    .contact-list ul{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1em;
+        position: relative;
+    }
+    
+    .contact-list ul {
+        flex-basis: 50%;
+        margin: 0 15px;
+    }
+
+    .contact-list ul li {
+        font-size: 1em;
+    }
+}
