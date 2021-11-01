@@ -18,6 +18,8 @@
 
 	--clr-dark-7: rgba(24, 24, 24, 0.7);
 	--clr-gray-7: rgba(44, 44, 44, 0.7);
+
+	--teal-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300c6cf' fill-opacity='0.8' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")
 }
 
 .lightmode {
@@ -25,6 +27,10 @@
 	--clr-gray: #e0e0e0;
 	--clr-gray2: #9e9e9e;
 
+	
+	--clr-accent-teal: #068488;
+
+	--clr-accent-teal-rgb: 6, 132, 136;
 	--clr-dark-rgb: 250, 250, 250;
 	--clr-off-white-rgb: 66, 66, 66;
 	--clr-gray-rgb: 224, 224, 224;
@@ -34,6 +40,8 @@
 
 	--clr-dark-7: rgba(250, 250, 250, 0.7);
 	--clr-gray-7: rgba(188, 188, 188, 0.7);
+
+	--teal-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23068488' fill-opacity='0.8' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")
 }
 
 *,
@@ -425,7 +433,7 @@ a.icon-discord:hover { color: #5865F2; }
 	border-radius: 0;
 	top: -20px;
 	left: -12px;
-	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300c6cf' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+	background-image: var(--teal-bg);
 	background-repeat: repeat;
 	width: 340px;
 	height: 340px;
