@@ -36,22 +36,25 @@ function fadeNav() {
 }
 
 function navSlide() {
-    burger.addEventListener('click', () => {
 
-        navUl.classList.toggle('nav-active')
-        if (navUl.classList.contains('nav-active')) document.body.style.position = 'fixed'
-        else document.body.style.position = 'static'
+    if(burger) {
+        burger.addEventListener('click', () => {
 
-        navItems.forEach( (item, idx) => {
-            item.addEventListener('click', closeNav)
-            if (item.style.animation) {
-                item.style.animation = null
-            } else {
-                item.style.animation = `navItemsFadeIn 0.5s ease forwards ${idx / 7 + 0.3}s`
-            }
+            navUl.classList.toggle('nav-active')
+            if (navUl.classList.contains('nav-active')) document.body.style.position = 'fixed'
+            else document.body.style.position = 'static'
+
+            navItems.forEach( (item, idx) => {
+                item.addEventListener('click', closeNav)
+                if (item.style.animation) {
+                    item.style.animation = null
+                } else {
+                    item.style.animation = `navItemsFadeIn 0.5s ease forwards ${idx / 7 + 0.3}s`
+                }
+            });
+            burger.classList.toggle('toggle')
         });
-        burger.classList.toggle('toggle')
-    });
+    }
 }
 
 function closeNav()  {

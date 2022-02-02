@@ -2,15 +2,25 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Personal Website of G M Jisnu">
-		<meta name="theme-color" content="hsl(0, 0%, 98%)" media="(prefers-color-scheme: light)">
-		<meta name="theme-color" content="hsl(0, 0%, 9%)" media="(prefers-color-scheme: dark)">
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 		<link rel="manifest" href="favicon/site.webmanifest">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jisnu GM</title>
+		<meta 
+			name="description"
+			content="Personal Website of G M Jisnu"
+		>
+		<meta name="keywords" content="gm jisnu, zeusgmj, jisnu gm">
+		<meta property="og:title" content="Jisnu GM" />
+		<meta
+			property="og:description"
+			content="Personal Website of G M Jisnu"
+		/>
+		<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#171717"(prefers-color-scheme: dark)">
 		<link rel="stylesheet" href="utilities.css" />
 		<link rel="stylesheet" href="style.css" />
 		<link
@@ -20,7 +30,6 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<title>Jisnu GM</title>
 	</head>
 	<body>
 		<!-- Nav -->
@@ -465,6 +474,16 @@
 								<img src="assets/svgs/github.svg" alt="Github" />
 							</a>
 						</div>
+						<div class="tool grow">
+							<a
+								href="https://www.heroku.com/home"
+								target="_blank"
+								rel="noopener"
+								title="Postman"
+							>
+								<img src="assets/svgs/heroku.svg" alt="Heroku" />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -475,13 +494,14 @@
 				<h1 class="title">
 					<a href="#projects">Projects</a>
 				</h1>
-				<div class="projects-list flex">
-					<div class="project-detail card">
-						<div class="project flex">
+				<div class="projects-list grid">
+					<div class="project card">
+						<div class="project-detail flex">
 							<div class="project-body">
-								<h2 class="project-head">
+								<h2 class="project-title">
 									<i class="fas fa-project-diagram"></i> Project Blue
 								</h2>
+								<small class="small-text">Lead developer</small>
 								<hr class="white-dashed" />
 								<div class="project-info">
 									<span>
@@ -496,6 +516,7 @@
 												target="_blank"
 												rel="noopener"
 												title="Github"
+												class="flex"
 											>
 												<i class="fab fa-github"></i>
 												<span>Github</span>
@@ -507,6 +528,7 @@
 												target="_blank"
 												rel="noopener"
 												title="Top.GG"
+												class="flex"
 											>
 												<i class="fas fa-external-link-alt"></i>
 												<span>Top.gg</span>
@@ -517,6 +539,41 @@
 							</div>
 							<div class="project-cover shrink">
 								<img src="https://cdn.discordapp.com/avatars/724213925767544893/3cdc0e682bd5930199b94331f60379f6.png?size=256" alt="Project Blue" class="project-img">
+							</div>
+						</div>
+					</div>
+					<div class="project card">
+						<div class="project-detail flex">
+							<div class="project-body">
+								<h2 class="project-title">
+									<i class="fas fa-project-diagram"></i> Hyper
+								</h2>
+								<small class="small-text">Contributor</small>
+								<hr class="white-dashed" />
+								<div class="project-info">
+									<span>
+										Hyper is a comprehensive Discord chatbot, developed for private use. The bot is fully customisable and allows for basic moderation, logging events, custom commands, timed messages, and more!
+									</span>
+								</div>
+								<div class="project-links">
+									<ul class="flex">
+										<li>
+											<a
+												href="https://github.com/Fluxpuck/hyper"
+												target="_blank"
+												rel="noopener"
+												title="Github"
+												class="flex"
+											>
+												<i class="fab fa-github"></i>
+												<span>Github</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="project-cover shrink">
+								<img src="https://cdn.discordapp.com/emojis/766678280945270836.png?size=2048" alt="Project Blue" class="project-img">
 							</div>
 						</div>
 					</div>
@@ -670,5 +727,24 @@
 			</div>
 		</footer>
 		<script src="script.js"></script>
+		<noscript class="noscript">
+			<div>
+				<h1>Javascript is Disabled :(</h1>
+				<div class="card">
+					<p>
+						Sorry, But this site doesn't work properly without Javascript enabled. Please enable it to continue.
+					</p>
+				</div>
+			</div>
+
+			<style>
+				section,
+				section.image-parallax-1,
+				.nav,
+				footer.flex {
+					display: none;
+				}
+			</style>
+		</noscript>
 	</body>
 </html>
