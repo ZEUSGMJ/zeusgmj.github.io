@@ -3,7 +3,8 @@
 :root {
 	--clr-dark: hsl(0, 0%, 9%);
 	--clr-gray: #444444;
-	--clr-gray2: #3d3d3d;
+	--clr-gray2: #383838;
+	--clr-light-gray: #606060;
 
 	--clr-accent-teal: #00c6cf;
 
@@ -15,6 +16,7 @@
 	--clr-gray2-rgb: 24, 24, 24;
 
 	--clr-off-white: #ededed;
+	--clr-black: #ddd;
 
 	--clr-dark-7: rgba(24, 24, 24, 0.7);
 	--clr-gray-7: rgba(44, 44, 44, 0.7);
@@ -28,7 +30,7 @@
 	--clr-dark: hsl(0, 0%, 98%);
 	--clr-gray: #e0e0e0;
 	--clr-gray2: #9e9e9e;
-
+	--clr-light-gray: #606060;
 	
 	--clr-accent-teal: #068488;
 
@@ -39,6 +41,7 @@
 	--clr-gray2-rgb: 158, 158, 158;
 
 	--clr-off-white: #424242;
+	--clr-black: #212121;
 
 	--clr-dark-7: rgba(250, 250, 250, 0.7);
 	--clr-gray-7: rgba(188, 188, 188, 0.7);
@@ -180,28 +183,29 @@ hr.gray-dashed {
 	padding: 10px 15px;
 	cursor: pointer;
 	border: 0;
-	background-color: rgba(var(--clr-gray2-rgb), .8);
-	color: var(--clr-off-white);
+	background-color: rgba(var(--clr-gray2-rgb), 1);
+	color: var(--clr-black);
 	border-radius: 8px;
 	font-family: 'Roboto', serif;
 	font-weight: 600;
 	letter-spacing: 0.4px;
-	transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in;
-	-o-transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in;
-	-moz-transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in;
-	-webkit-transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in;
+	transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
-	-webkit-transform: translateY(-3px) scale(1.015);
-	-moz-transform: translateY(-3px) scale(1.015);
-	-o-transform: translateY(-3px) scale(1.015);
-	transform: translateY(-3px) scale(1.015);
-	box-shadow: 0px 6px 0px 0px rgba(var(--clr-accent-teal-rgb), 0.5);
+	background-color: rgba(var(--clr-gray2-rgb), .8);
 }
 
-.btn:active {
+.btn:active,
+.btn:focus {
 	outline: none;
+}
+
+.btn:focus {
+	transform: scale(0.98);
 }
 
 noscript.noscript {
@@ -300,20 +304,18 @@ noscript.noscript {
 	text-transform: uppercase;
 	padding: 10px 14px;
 	border-radius: 8px;
-	-webkit-transition: all 0.3s ease-in 0s;
-	-moz-transition: all 0.3s ease-in 0s;
-	-o-transition: all 0.3s ease-in 0s;
-	transition: all 0.3s ease-in 0s;
+	-webkit-transition: background-color 0.150s ease-in 0s;
+	-moz-transition: background-color 0.150s ease-in 0s;
+	-o-transition: background-color 0.150s ease-in 0s;
+	transition: background-color 0.150s ease-in 0s;
 }
 
 .nav-items li a:hover {
 	background-color: var(--clr-gray);
-	box-shadow: 0 3px 0 0 var(--clr-accent-teal);
 }
 
 .nav-items li a:active {
 	background-color: var(--clr-gray2);
-	border-bottom: 3px solid var(--clr-accent-teal);
 }
 
 .burger {
@@ -390,7 +392,7 @@ noscript.noscript {
 	gap: 0.5rem;
 	padding: 0.25rem 0;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .details-list li i {
@@ -449,7 +451,7 @@ noscript.noscript {
 .icon-github,
 .icon-steam, 
 .icon-discord {
-	transition: all .4s ease;
+	transition: all .075s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 a.icon-linkedin:hover { color: #0077b5; }
