@@ -575,8 +575,9 @@ a.icon-discord:hover { color: #5865F2; }
 	background-color: var(--clr-gray);
 	position: relative;
 	margin: 0 auto;
-	width: 5px;
+	width: .375rem;
 	padding-bottom: 40px;
+	border-radius: 6px;
 }
 
 .timeline-list ul li:last-child {
@@ -1380,4 +1381,12 @@ footer .footer i {
 	  100% {
 		background-position: 0 0;
 	  }
+}
+
+@supports (((-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px)))) {
+	.nav {
+		background: rgba(var(--clr-dark-rgb), 0.8);
+		-webkit-backdrop-filter: saturate(180%) blur(20px);
+		backdrop-filter: saturate(180%) blur(20px);
+	}
 }
