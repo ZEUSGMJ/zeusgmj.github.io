@@ -5,7 +5,7 @@ const navItems = document.querySelectorAll('.nav-items li');
 const toggle = document.getElementById('toggle');
 const theme = localStorage.getItem('site-theme');
 
-window.onscroll(fadeNav)
+window.addEventListener('scroll',fadeNav);
 
 navSlide();
 

@@ -259,10 +259,10 @@ noscript.noscript {
 	min-height: 8vh;
 	box-shadow: 0 1.2px var(--clr-gray-7);
 	background-color: var(--clr-dark);
-	transition: box-shadow 0.6s ease-in-out, padding 0.6s ease-in-out;
-	-webkit-transition: box-shadow 0.6s ease-in-out, padding 0.6s ease-in-out;
-	-moz-transition: box-shadow 0.6s ease-in-out, padding 0.6s ease-in-out;
-	-o-transition: box-shadow 0.6s ease-in-out, padding 0.6s ease-in-out;
+	transition: box-shadow 0.6s ease-in-out, padding 0.3s ease-in-out;
+	-webkit-transition: box-shadow 0.6s ease-in-out, padding 0.3s ease-in-out;
+	-moz-transition: box-shadow 0.6s ease-in-out, padding 0.3s ease-in-out;
+	-o-transition: box-shadow 0.6s ease-in-out, padding 0.3s ease-in-out;
 	z-index: 1;
 }
 
