@@ -15,13 +15,13 @@ if (theme == 'lightmode') {
 } else toggle.checked = false;
 
 toggle.addEventListener('input', (e) => {
+    e.preventDefault();
     const isChecked = e.target.checked;
 
     if (isChecked) {
         document.body.classList.add('lightmode');
         setTheme('lightmode');
-    }
-    else {
+    } else {
         document.body.classList.remove('lightmode');
         setTheme(null);
     }
