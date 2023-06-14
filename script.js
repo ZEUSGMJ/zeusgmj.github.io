@@ -14,7 +14,7 @@ if (theme == 'lightmode') {
     toggle.checked = true;
 } else toggle.checked = false;
 
-toggle.addEventListener('input', (e) => {
+toggle.addEventListener('change', (e) => {
     e.preventDefault();
     const isChecked = e.target.checked;
 
