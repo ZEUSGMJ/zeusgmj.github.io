@@ -15,8 +15,9 @@ if (theme == 'lightmode') {
 } else toggle.checked = false;
 
 toggle.addEventListener('change', (e) => {
-    e.preventDefault();
     const isChecked = e.target.checked;
+
+    document.body.style.overflow = 'hidden';
 
     if (isChecked) {
         document.body.classList.add('lightmode');
@@ -25,7 +26,12 @@ toggle.addEventListener('change', (e) => {
         document.body.classList.remove('lightmode');
         setTheme(null);
     }
+
+    setTimeout(() => {
+        document.body.style.overflow = 'auto';
+    }, 100);
 });
+
 
 function setTheme(themeName) {
     localStorage.setItem('site-theme', themeName);
