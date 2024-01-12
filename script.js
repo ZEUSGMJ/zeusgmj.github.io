@@ -19,7 +19,7 @@ const quotes = [
     },
     {
         quote: "When smart people get happy, they stop recognising themselves.",
-        quote: 'Rick Sanchez'
+        author: 'Rick Sanchez'
     },
     {
         quote: "Why Should You Be Embarrassed About Being Honest And Saying Something Nice?",
